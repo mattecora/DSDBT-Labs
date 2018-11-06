@@ -1,6 +1,6 @@
-SELECT      PurchaseMode,
+SELECT      PurchaseYear,
             PurchaseMonth,
-            PurchaseYear,
+            PurchaseMode,
             ROUND(SUM(Revenues)/EXTRACT(
                 DAY FROM LAST_DAY(TO_DATE(PurchaseMonth, 'MM-YYYY')))
                 , 2) AS AvgDailyRevenue,
@@ -15,4 +15,4 @@ SELECT      PurchaseMode,
 FROM        F_TICKETSALES TS, D_PURCHASEDATE PD
 WHERE       TS.PurchaseDate_ID = PD.PurchaseDate_ID
 GROUP BY    PurchaseMode, PurchaseMonth, PurchaseYear
-ORDER BY    PurchaseMonth, PurchaseMode;
+ORDER BY    PurchaseYear, PurchaseMonth, PurchaseMode;

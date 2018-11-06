@@ -16,4 +16,5 @@ AND         TS.EventDate_ID = ED.EventDate_ID
 AND         TS.Singer_ID = S.Singer_ID
 AND         TS.EventLocation_ID = EL.EventLocation_ID
 AND         EventYear = 2017
-GROUP BY    SingerNationality, EventCity, EventProvince, EventRegion;
+GROUP BY    SingerNationality, EventCity, EventProvince, EventRegion
+ORDER BY    SingerNationality, EventCity, EventProvince, EventRegion;
