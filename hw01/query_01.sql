@@ -1,8 +1,7 @@
-SELECT      PurchaseYear,
-            PurchaseMonth,
+SELECT      TO_CHAR(PurchaseYear, 'YYYY') AS PurchaseYear,
+            TO_CHAR(PurchaseMonth, 'MM-YYYY') AS PurchaseMonth,
             PurchaseMode,
-            ROUND(SUM(Revenues)/EXTRACT(
-                DAY FROM LAST_DAY(TO_DATE(PurchaseMonth, 'MM-YYYY')))
+            ROUND(SUM(Revenues)/EXTRACT(DAY FROM LAST_DAY(PurchaseMonth))
                 , 2) AS AvgDailyRevenue,
             SUM(SUM(Revenues)) OVER (
                 PARTITION BY PurchaseYear
