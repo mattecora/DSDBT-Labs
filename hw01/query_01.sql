@@ -1,11 +1,11 @@
-SELECT      TO_CHAR(PurchaseYear, 'YYYY') AS PurchaseYear,
-            TO_CHAR(PurchaseMonth, 'MM-YYYY') AS PurchaseMonth,
+SELECT      PurchaseYear,
+            PurchaseMonth,
             PurchaseMode,
-            ROUND(SUM(Revenues)/EXTRACT(DAY FROM LAST_DAY(PurchaseMonth))
-                , 2) AS AvgDailyRevenue,
+            ROUND(SUM(Revenues)/COUNT(*), 2)
+                AS AvgDailyRevenue,
             SUM(SUM(Revenues)) OVER (
-                PARTITION BY PurchaseYear
-                ORDER BY PurchaseMonth, PurchaseMode
+                PARTITION BY PurchaseYear, PurchaseMode
+                ORDER BY PurchaseMonth
                 ROWS UNBOUNDED PRECEDING
                 ) AS RevenueFromBeginningOfYear,
             ROUND(SUM(NumberOfTickets)/SUM(SUM(NumberOfTickets))
