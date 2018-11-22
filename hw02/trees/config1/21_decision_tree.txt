@@ -1,0 +1,50 @@
+####################
+# Gain ratio: 0.01 #
+# Max depth: 5     #
+####################
+
+node-caps = 'no'
+|   irradiat = 'no'
+|   |   tumor-size = '0-4': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=7}
+|   |   tumor-size = '10-14': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=25}
+|   |   tumor-size = '15-19': 'no-recurrence-events' {'recurrence-events'=3, 'no-recurrence-events'=19}
+|   |   tumor-size = '20-24': 'no-recurrence-events' {'recurrence-events'=6, 'no-recurrence-events'=28}
+|   |   tumor-size = '25-29'
+|   |   |   breast-quad = 'central': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}
+|   |   |   breast-quad = 'left_low': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=12}
+|   |   |   breast-quad = 'left_up': 'no-recurrence-events' {'recurrence-events'=3, 'no-recurrence-events'=5}
+|   |   |   breast-quad = 'right_low': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=4}
+|   |   |   breast-quad = 'right_up': 'recurrence-events' {'recurrence-events'=4, 'no-recurrence-events'=1}
+|   |   tumor-size = '30-34': 'no-recurrence-events' {'recurrence-events'=10, 'no-recurrence-events'=24}
+|   |   tumor-size = '35-39'
+|   |   |   breast-quad = 'left_low': 'recurrence-events' {'recurrence-events'=3, 'no-recurrence-events'=3}
+|   |   |   breast-quad = 'left_up': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=3}
+|   |   |   breast-quad = 'right_up': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}
+|   |   tumor-size = '40-44'
+|   |   |   breast-quad = 'left_low': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=2}
+|   |   |   breast-quad = 'left_up': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=5}
+|   |   |   breast-quad = 'right_up': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=3}
+|   |   tumor-size = '5-9': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=3}
+|   |   tumor-size = '50-54': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=3}
+|   irradiat = 'yes'
+|   |   deg-malig = '1': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=2}
+|   |   deg-malig = '2': 'no-recurrence-events' {'recurrence-events'=4, 'no-recurrence-events'=13}
+|   |   deg-malig = '3': 'recurrence-events' {'recurrence-events'=8, 'no-recurrence-events'=5}
+node-caps = 'yes'
+|   deg-malig = '2'
+|   |   age = '30-39'
+|   |   |   inv-nodes = '3-5': 'recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=1}
+|   |   |   inv-nodes = '6-8': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}
+|   |   age = '40-49'
+|   |   |   breast = 'left': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
+|   |   |   breast = 'right': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=4}
+|   |   age = '50-59': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=10}
+|   |   age = '60-69': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=1}
+|   deg-malig = '3'
+|   |   breast = 'left': 'recurrence-events' {'recurrence-events'=16, 'no-recurrence-events'=2}
+|   |   breast = 'right'
+|   |   |   irradiat = 'no': 'recurrence-events' {'recurrence-events'=7, 'no-recurrence-events'=2}
+|   |   |   irradiat = 'yes': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=3}
+node-caps = ?
+|   irradiat = 'no': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
+|   irradiat = 'yes': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=5}

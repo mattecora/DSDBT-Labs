@@ -1,0 +1,40 @@
+####################
+# Gain ratio: 0.03 #
+# Max depth: 5     #
+####################
+
+node-caps = 'no'
+|   deg-malig = '1': 'no-recurrence-events' {'recurrence-events'=9, 'no-recurrence-events'=57}
+|   deg-malig = '2'
+|   |   breast-quad = 'central': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=6}
+|   |   breast-quad = 'left_low': 'no-recurrence-events' {'recurrence-events'=9, 'no-recurrence-events'=33}
+|   |   breast-quad = 'left_up'
+|   |   |   age = '30-39': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=1}
+|   |   |   age = '40-49': 'no-recurrence-events' {'recurrence-events'=3, 'no-recurrence-events'=11}
+|   |   |   age = '50-59': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=7}
+|   |   |   age = '60-69': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=9}
+|   |   breast-quad = 'right_low': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=9}
+|   |   breast-quad = 'right_up'
+|   |   |   breast = 'left': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
+|   |   |   breast = 'right': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=7}
+|   deg-malig = '3'
+|   |   irradiat = 'no': 'no-recurrence-events' {'recurrence-events'=14, 'no-recurrence-events'=26}
+|   |   irradiat = 'yes': 'recurrence-events' {'recurrence-events'=8, 'no-recurrence-events'=5}
+node-caps = 'yes'
+|   deg-malig = '2'
+|   |   age = '30-39'
+|   |   |   inv-nodes = '3-5': 'recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=1}
+|   |   |   inv-nodes = '6-8': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}
+|   |   age = '40-49'
+|   |   |   breast = 'left': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
+|   |   |   breast = 'right': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=4}
+|   |   age = '50-59': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=10}
+|   |   age = '60-69': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=1}
+|   deg-malig = '3'
+|   |   breast = 'left': 'recurrence-events' {'recurrence-events'=16, 'no-recurrence-events'=2}
+|   |   breast = 'right'
+|   |   |   irradiat = 'no': 'recurrence-events' {'recurrence-events'=7, 'no-recurrence-events'=2}
+|   |   |   irradiat = 'yes': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=3}
+node-caps = ?
+|   irradiat = 'no': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
+|   irradiat = 'yes': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=5}
