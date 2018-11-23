@@ -44,11 +44,11 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="k_nn" compatibility="5.3.015" expanded="true" height="76" name="k-NN" width="90" x="112" y="30">
-            <parameter key="k" value="3"/>
+            <parameter key="k" value="5"/>
             <parameter key="weighted_vote" value="false"/>
             <parameter key="measure_types" value="MixedMeasures"/>
             <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
@@ -121,11 +121,11 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="k_nn" compatibility="5.3.015" expanded="true" height="76" name="k-NN (2)" width="90" x="112" y="30">
-            <parameter key="k" value="6"/>
+            <parameter key="k" value="10"/>
             <parameter key="weighted_vote" value="false"/>
             <parameter key="measure_types" value="MixedMeasures"/>
             <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
@@ -198,11 +198,11 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="k_nn" compatibility="5.3.015" expanded="true" height="76" name="k-NN (3)" width="90" x="112" y="30">
-            <parameter key="k" value="9"/>
+            <parameter key="k" value="15"/>
             <parameter key="weighted_vote" value="false"/>
             <parameter key="measure_types" value="MixedMeasures"/>
             <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
@@ -275,11 +275,11 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="k_nn" compatibility="5.3.015" expanded="true" height="76" name="k-NN (4)" width="90" x="112" y="30">
-            <parameter key="k" value="12"/>
+            <parameter key="k" value="20"/>
             <parameter key="weighted_vote" value="false"/>
             <parameter key="measure_types" value="MixedMeasures"/>
             <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
@@ -352,11 +352,11 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="k_nn" compatibility="5.3.015" expanded="true" height="76" name="k-NN (5)" width="90" x="112" y="30">
-            <parameter key="k" value="15"/>
+            <parameter key="k" value="25"/>
             <parameter key="weighted_vote" value="false"/>
             <parameter key="measure_types" value="MixedMeasures"/>
             <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
@@ -429,8 +429,8 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="naive_bayes" compatibility="5.3.015" expanded="true" height="76" name="Naive Bayes" width="90" x="112" y="30">
             <parameter key="laplace_correction" value="true"/>

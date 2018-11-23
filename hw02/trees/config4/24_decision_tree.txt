@@ -1,35 +1,24 @@
 ####################
-# Gain ratio: 0.05 #
+# Gain ratio: 0.08 #
 # Max depth: 20    #
 ####################
 
-node-caps = 'no'
-|   deg-malig = '1'
-|   |   irradiat = 'no'
-|   |   |   menopause = 'ge40': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=29}
-|   |   |   menopause = 'lt40': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}
-|   |   |   menopause = 'premeno'
-|   |   |   |   tumor-size = '10-14': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=6}
-|   |   |   |   tumor-size = '15-19': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=3}
-|   |   |   |   tumor-size = '20-24': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=4}
-|   |   |   |   tumor-size = '25-29': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=5}
-|   |   |   |   tumor-size = '30-34': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=4}
-|   |   |   |   tumor-size = '35-39': 'recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=1}
-|   |   |   |   tumor-size = '40-44': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=1}
-|   |   irradiat = 'yes': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=2}
-|   deg-malig = '2': 'no-recurrence-events' {'recurrence-events'=20, 'no-recurrence-events'=83}
-|   deg-malig = '3': 'no-recurrence-events' {'recurrence-events'=22, 'no-recurrence-events'=31}
-node-caps = 'yes'
-|   deg-malig = '2'
+deg-malig = '1'
+|   node-caps = 'no'
 |   |   age = '30-39'
-|   |   |   inv-nodes = '3-5': 'recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=1}
-|   |   |   inv-nodes = '6-8': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}
-|   |   age = '40-49'
-|   |   |   breast = 'left': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
-|   |   |   breast = 'right': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=4}
-|   |   age = '50-59': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=10}
-|   |   age = '60-69': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=1}
-|   deg-malig = '3'
+|   |   |   breast = 'left': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=3}
+|   |   |   breast = 'right': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=1}
+|   |   age = '40-49': 'no-recurrence-events' {'recurrence-events'=3, 'no-recurrence-events'=15}
+|   |   age = '50-59': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=22}
+|   |   age = '60-69': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=13}
+|   |   age = '70-79': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=3}
+|   node-caps = ?
+|   |   breast = 'left': 'recurrence-events' {'recurrence-events'=3, 'no-recurrence-events'=0}
+|   |   breast = 'right': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}
+deg-malig = '2': 'no-recurrence-events' {'recurrence-events'=28, 'no-recurrence-events'=102}
+deg-malig = '3'
+|   node-caps = 'no': 'no-recurrence-events' {'recurrence-events'=22, 'no-recurrence-events'=31}
+|   node-caps = 'yes'
 |   |   breast = 'left'
 |   |   |   irradiat = 'no'
 |   |   |   |   menopause = 'ge40': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=2}
@@ -40,6 +29,4 @@ node-caps = 'yes'
 |   |   |   |   menopause = 'ge40': 'no-recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=2}
 |   |   |   |   menopause = 'premeno': 'recurrence-events' {'recurrence-events'=5, 'no-recurrence-events'=0}
 |   |   |   irradiat = 'yes': 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=3}
-node-caps = ?
-|   irradiat = 'no': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
-|   irradiat = 'yes': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=5}
+|   node-caps = ?: 'no-recurrence-events' {'recurrence-events'=0, 'no-recurrence-events'=2}

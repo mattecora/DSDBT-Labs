@@ -44,8 +44,8 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="decision_tree" compatibility="5.3.015" expanded="true" height="76" name="Decision Tree" width="90" x="112" y="30">
             <parameter key="criterion" value="gain_ratio"/>
@@ -114,8 +114,8 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="decision_tree" compatibility="5.3.015" expanded="true" height="76" name="Decision Tree (2)" width="90" x="197" y="30">
             <parameter key="criterion" value="gain_ratio"/>
@@ -184,14 +184,14 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="decision_tree" compatibility="5.3.015" expanded="true" height="76" name="Decision Tree (3)" width="90" x="197" y="30">
             <parameter key="criterion" value="gain_ratio"/>
             <parameter key="minimal_size_for_split" value="4"/>
             <parameter key="minimal_leaf_size" value="2"/>
-            <parameter key="minimal_gain" value="0.03"/>
+            <parameter key="minimal_gain" value="0.04"/>
             <parameter key="maximal_depth" value="20"/>
             <parameter key="confidence" value="0.25"/>
             <parameter key="number_of_prepruning_alternatives" value="3"/>
@@ -254,14 +254,14 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="decision_tree" compatibility="5.3.015" expanded="true" height="76" name="Decision Tree (4)" width="90" x="197" y="30">
             <parameter key="criterion" value="gain_ratio"/>
             <parameter key="minimal_size_for_split" value="4"/>
             <parameter key="minimal_leaf_size" value="2"/>
-            <parameter key="minimal_gain" value="0.03"/>
+            <parameter key="minimal_gain" value="0.04"/>
             <parameter key="maximal_depth" value="5"/>
             <parameter key="confidence" value="0.25"/>
             <parameter key="number_of_prepruning_alternatives" value="3"/>
@@ -324,14 +324,14 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="decision_tree" compatibility="5.3.015" expanded="true" height="76" name="Decision Tree (5)" width="90" x="197" y="30">
             <parameter key="criterion" value="gain_ratio"/>
             <parameter key="minimal_size_for_split" value="4"/>
             <parameter key="minimal_leaf_size" value="2"/>
-            <parameter key="minimal_gain" value="0.05"/>
+            <parameter key="minimal_gain" value="0.08"/>
             <parameter key="maximal_depth" value="20"/>
             <parameter key="confidence" value="0.25"/>
             <parameter key="number_of_prepruning_alternatives" value="3"/>
@@ -394,14 +394,14 @@
         <parameter key="leave_one_out" value="false"/>
         <parameter key="number_of_validations" value="10"/>
         <parameter key="sampling_type" value="stratified sampling"/>
-        <parameter key="use_local_random_seed" value="false"/>
-        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="use_local_random_seed" value="true"/>
+        <parameter key="local_random_seed" value="2001"/>
         <process expanded="true">
           <operator activated="true" class="decision_tree" compatibility="5.3.015" expanded="true" height="76" name="Decision Tree (6)" width="90" x="197" y="30">
             <parameter key="criterion" value="gain_ratio"/>
             <parameter key="minimal_size_for_split" value="4"/>
             <parameter key="minimal_leaf_size" value="2"/>
-            <parameter key="minimal_gain" value="0.05"/>
+            <parameter key="minimal_gain" value="0.08"/>
             <parameter key="maximal_depth" value="5"/>
             <parameter key="confidence" value="0.25"/>
             <parameter key="number_of_prepruning_alternatives" value="3"/>

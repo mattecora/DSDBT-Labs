@@ -1,5 +1,5 @@
 ####################
-# Gain ratio: 0.03 #
+# Gain ratio: 0.04 #
 # Max depth: 5     #
 ####################
 
@@ -17,9 +17,7 @@ node-caps = 'no'
 |   |   breast-quad = 'right_up'
 |   |   |   breast = 'left': 'recurrence-events' {'recurrence-events'=2, 'no-recurrence-events'=0}
 |   |   |   breast = 'right': 'no-recurrence-events' {'recurrence-events'=1, 'no-recurrence-events'=7}
-|   deg-malig = '3'
-|   |   irradiat = 'no': 'no-recurrence-events' {'recurrence-events'=14, 'no-recurrence-events'=26}
-|   |   irradiat = 'yes': 'recurrence-events' {'recurrence-events'=8, 'no-recurrence-events'=5}
+|   deg-malig = '3': 'no-recurrence-events' {'recurrence-events'=22, 'no-recurrence-events'=31}
 node-caps = 'yes'
 |   deg-malig = '2'
 |   |   age = '30-39'
