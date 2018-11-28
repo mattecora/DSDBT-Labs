@@ -1,0 +1,64 @@
+CREATE OR REPLACE TRIGGER TICKET_ISSUE
+AFTER INSERT ON TICKETS
+FOR EACH ROW
+WHEN (NEW.CARDNO IS NOT NULL)
+DECLARE
+    CURRENT_FLIGHT_MILES NUMBER;
+    TOTAL_MILES NUMBER;
+    STATUS_CHANGE BOOLEAN;
+    OLD_STATUS VARCHAR(20);
+    NEW_STATUS VARCHAR(20);
+    LAST_NOTIFY NUMBER;
+BEGIN
+    -- retrieve miles for the current flight
+    SELECT MILES INTO CURRENT_FLIGHT_MILES
+    FROM FLIGHTS
+    WHERE FLIGHTID = :NEW.FLIGHTID;
+    
+    -- insert in the credits table
+    INSERT INTO CREDITS(TICKETID, CARDNO, MILES)
+    VALUES (:NEW.TICKETID, :NEW.CARDNO, CURRENT_FLIGHT_MILES);
+    
+    -- compute total miles for the customer
+    SELECT SUM(MILES) INTO TOTAL_MILES
+    FROM CREDITS
+    WHERE CARDNO = :NEW.CARDNO;
+    
+    -- retrieve old status
+    SELECT STATUS INTO OLD_STATUS
+    FROM CARDS
+    WHERE CARDNO = :NEW.CARDNO;
+    
+    -- check if status has to be changed
+    STATUS_CHANGE := FALSE;
+    
+    IF (TOTAL_MILES > 30000 AND TOTAL_MILES <= 50000 AND OLD_STATUS != 'GOLD') THEN
+        STATUS_CHANGE := TRUE;
+        NEW_STATUS := 'GOLD';
+    ELSIF (TOTAL_MILES > 50000 AND OLD_STATUS != 'PREMIUM') THEN
+        STATUS_CHANGE := TRUE;
+        NEW_STATUS := 'PREMIUM';
+    END IF;
+    
+    -- upgrade card status
+    IF (STATUS_CHANGE) THEN
+        -- set new status
+        UPDATE CARDS
+        SET STATUS = NEW_STATUS
+        WHERE CARDNO = :NEW.CARDNO;
+        
+        -- get the last notification number
+        SELECT MAX(NOTIFYNO) INTO LAST_NOTIFY
+        FROM NOTIFY
+        WHERE CARDNO = :NEW.CARDNO;
+        
+        -- manage no notifications case
+        IF (LAST_NOTIFY IS NULL) THEN
+            LAST_NOTIFY := 0;
+        END IF;
+        
+        -- insert new notification
+        INSERT INTO NOTIFY(CARDNO, NOTIFYNO, NOTIFYDATE, OLDSTATUS, NEWSTATUS, TOTALMILES)
+        VALUES (:NEW.CARDNO, LAST_NOTIFY+1, SYSDATE, OLD_STATUS, NEW_STATUS, TOTAL_MILES);
+    END IF;
+END;
