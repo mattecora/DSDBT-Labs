@@ -1,0 +1,79 @@
+-- TRIGGER 1
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (1, sysdate, '333000010', 3, 3, 'O');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (2, sysdate, '333000009', 15, 15, 'O');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (3, sysdate, '333000009', 15, 15, 'F');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+
+-- TRIGGER 2
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (4, sysdate, '333000001', 3, 3, 'O');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (6, sysdate, '333000004', 5, 5, 'O');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (7, sysdate, '333000004', 5, 5, 'C');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+SELECT * FROM EXCEPTION_LOG;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (8, sysdate, '333000001', 3, 3, 'C');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+SELECT * FROM EXCEPTION_LOG;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (9, sysdate, '333000010', 3, 3, 'C');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+SELECT * FROM EXCEPTION_LOG;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (10, sysdate, '333000020', 4, 4, 'O');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+
+INSERT INTO STATE_CHANGE(ChangeId, TimeStamp, PhoneNo, x, y, ChangeType)
+VALUES (11, sysdate, '333000020', 4, 4, 'C');
+
+SELECT * FROM TELEPHONE;
+SELECT * FROM CELL;
+SELECT * FROM EXCEPTION_LOG;
+
+-- TRIGGER 3
+
+UPDATE CELL SET MaxCalls = MaxCalls-2;
+SELECT * FROM CELL;
+
+-- TRIGGER 4
+UPDATE CELL SET MaxCalls = MaxCalls-1;
+SELECT * FROM CELL;
+
+UPDATE CELL SET MaxCalls = MaxCalls-10;
+SELECT * FROM CELL;
