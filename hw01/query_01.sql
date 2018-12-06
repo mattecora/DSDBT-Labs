@@ -1,7 +1,7 @@
 SELECT      PurchaseMode,
             PurchaseYear,
             PurchaseMonth,
-            ROUND(SUM(Revenues)/COUNT(*), 2)
+            ROUND(SUM(Revenues)/COUNT(DISTINCT PurchaseDate), 2)
                 AS AvgDailyRevenue,
             SUM(SUM(Revenues)) OVER (
                 PARTITION BY PurchaseYear, PurchaseMode
