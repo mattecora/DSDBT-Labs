@@ -148,7 +148,7 @@ PHONENO             X          Y PHONES
 333000010           3          3 Active
 333000001           3          3 Active
 333000004           5          5 Active
-333000020           4          4 On
+333000020           4          4 On    
 
 
     CELLID         X0         Y0         X1         Y1 CURRENTPHONE#   MAXCALLS
@@ -167,7 +167,7 @@ PHONENO             X          Y PHONES
 333000010           3          3 Active
 333000001           3          3 Active
 333000004           5          5 Active
-333000020           4          4 On
+333000020           4          4 On    
 
 
     CELLID         X0         Y0         X1         Y1 CURRENTPHONE#   MAXCALLS
@@ -188,7 +188,7 @@ PHONENO             X          Y PHONES
 
     CELLID         X0         Y0         X1         Y1 CURRENTPHONE#   MAXCALLS
 ---------- ---------- ---------- ---------- ---------- ------------- ----------
-         1          0          0         10         10             4          2
+         1          0          0         10         10             4          3
          2         10          0         20         10             0         18
          3          0         10         10         20             0         18
          4         10         10         20         20             0         18
@@ -199,7 +199,7 @@ PHONENO             X          Y PHONES
 
     CELLID         X0         Y0         X1         Y1 CURRENTPHONE#   MAXCALLS
 ---------- ---------- ---------- ---------- ---------- ------------- ----------
-         1          0          0         10         10             4          2
+         1          0          0         10         10             4          3
          2         10          0         20         10             0         17
          3          0         10         10         20             0         17
          4         10         10         20         20             0         17
@@ -214,7 +214,7 @@ ORA-04088: errore durante esecuzione del trigger 'HW3.MAXCALLCHANGE2'
 
     CELLID         X0         Y0         X1         Y1 CURRENTPHONE#   MAXCALLS
 ---------- ---------- ---------- ---------- ---------- ------------- ----------
-         1          0          0         10         10             4          2
+         1          0          0         10         10             4          3
          2         10          0         20         10             0         17
          3          0         10         10         20             0         17
          4         10         10         20         20             0         17
