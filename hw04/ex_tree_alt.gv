@@ -17,8 +17,8 @@ graph {
     node_sigma_4[label=<&sigma;<sup>(4)</sup><sub>City='Santo Domingo'</sub>>,shape=none];
     
     node_join_1[label=<&#8904;<sup>(1)</sup><sub>ResortCode</sub>>,shape=none];
-    node_join_2[label=<&#8905;<sup>(2)</sup><sub>TouristID</sub>>,shape=none];
-    node_join_3[label=<&#8904;<sup>(3)</sup><sub>ResortCode</sub>>,shape=none];
+	node_join_2[label=<&#8904;<sup>(2)</sup><sub>ResortCode</sub>>,shape=none];
+    node_join_3[label=<&#8906;<sup>(3)</sup><sub>TouristID</sub>>,shape=none];
     
     node_gb_1[label=<GB<sup>(1)</sup><sub>TouristID</sub>>,shape=none];
     node_gb_2[label=<GB<sup>(2)</sup><sub>ResortCode, Name</sub>>,shape=none];
@@ -34,14 +34,28 @@ graph {
     node_gb_1 -- node_join_1 [label=< 10<sup>8</sup>>];
     node_sigma_3 -- node_gb_1 [label=< 10<sup>5</sup>>];
     
+	node_sigma_4 -- node_r [label=< 10<sup>4</sup>>];
+	
+	node_join_2 -- node_sigma_4 [label=< 10<sup>2</sup>>];
+	node_join_2 -- node_rs1 [label=< 10<sup>9</sup>>];
+	
+	node_join_3 -- node_join_2 [label=< 10<sup>7</sup>>];
+	node_join_3 -- node_sigma_3 [label=< 10<sup>4</sup>>];
+	
+	node_gb_2 -- node_join_3 [label=< 10<sup>6</sup>>];
+	
+	node_pi_1 -- node_gb_2 [label=< 10<sup>2</sup>>];
+	
+	/*
     node_join_2 -- node_sigma_3 [label=< 10<sup>4</sup>>];
     node_join_2 -- node_rs1 [label=< 10<sup>9</sup>>];
     
-    node_sigma_4 -- node_r [label=< 10<sup>4</sup>>];
+    
     
     node_join_3 -- node_join_2 [label=< 10<sup>8</sup>>];
     node_join_3 -- node_sigma_4 [label=< 10<sup>2</sup>>];
     
     node_gb_2 -- node_join_3 [label=< 10<sup>6</sup>>];
     node_pi_1 -- node_gb_2 [label=< 10<sup>2</sup>>];
+	*/
 }
