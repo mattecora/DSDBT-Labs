@@ -7,22 +7,22 @@
 
 graph {
     node_r[label="R",shape=none];
-	node_oth[label="...",shape=none];
-	
+    node_oth[label="...",shape=none];
+    
     node_sigma_4[label=<&sigma;<sup>(4)</sup><sub>City='Santo Domingo'</sub>>,shape=none];    
     
-	node_join_2[label=<&#8905;<sup>(2)</sup>>,shape=none];
+    node_join_2[label=<&#8905;<sup>(2)</sup>>,shape=none];
     node_join_3[label=<&#8904;<sup>(3)</sup>>,shape=none];
     
-	node_gb_2[label=<GB<sup>(2)</sup><sub>ResortCode</sub>>,shape=none];
+    node_gb_2[label=<GB<sup>(2)</sup><sub>ResortCode</sub>>,shape=none];
     
-	node_pi_1[label=<&pi;<sup>(1)</sup><sub>ResortCode, Name, SUM(Amount)</sub>>,shape=none];
-	
-	node_join_2 -- node_oth;
+    node_pi_1[label=<&pi;<sup>(1)</sup><sub>ResortCode, Name, SUM(Amount)</sub>>,shape=none];
+    
+    node_join_2 -- node_oth;
     node_sigma_4 -- node_r [label=< 10<sup>4</sup>>];
     
     node_gb_2 -- node_join_2 [label=< 10<sup>8</sup>>];
-	node_join_3 -- node_gb_2 [label=< 10<sup>4</sup>>];
+    node_join_3 -- node_gb_2 [label=< 10<sup>4</sup>>];
     node_join_3 -- node_sigma_4 [label=< 10<sup>2</sup>>];
     
     node_pi_1 -- node_join_3 [label=< 10<sup>2</sup>>];
